@@ -1,11 +1,11 @@
-var parent_div = document.createElement("div");
-parent_div.className = "main";
+var parent = document.createElement("div");
+parent.className = "main";
 
-document.body.append(parent_div);
+document.body.append(parent);
 
 function day(data) {
     setTimeout(() => {
-        parent_div.innerHTML = data;
+        parent.innerHTML = data;
     }, 10000);
 
 }
@@ -14,7 +14,7 @@ function data(callback) {
     var x = 0;
     for (let i = 10; i > 0; i--) {
         setTimeout(() => {
-            parent_div.innerHTML = `Count down starts: ${i}`;
+            parent.innerHTML = `Count down starts: ${i}`;
         }, x);
         x += 1000;
     }
